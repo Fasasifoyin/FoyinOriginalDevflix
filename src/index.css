@@ -1,13 +1,223 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.cdnfonts.com/css/noto-sans-mro");
+
+* {
+  text-decoration: none !important;
+  scroll-behavior: smooth;
+  font-family: "Noto Sans Mro", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.gradient {
+  background-image: linear-gradient(rgb(101, 140, 173), rgb(214, 214, 206));
+}
+
+.search {
+  width: 60vw;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid black;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+
+.searchresults{
+  width: 60vw;
+  height: 20rem;
+}
+
+.search::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.search:focus {
+  outline: none;
+  border-bottom: 3px solid black;
+}
+
+.icon {
+  color: rgb(255, 69, 0, 0.9);
+}
+
+.sideAdjust {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.scrollbody {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbody::-webkit-scrollbar {
+  display: none;
+}
+
+.outlet {
+  background-image: linear-gradient(
+    rgb(101, 140, 173),
+    rgb(214, 214, 206),
+    rgb(133, 96, 67, 0.5)
+  );
+  width: 100%;
+}
+
+.mediaCard {
+  flex: 0 1 130px;
+}
+
+.cast:hover {
+  opacity: 0.5;
+  transition: 0.4s ease-in;
+  background-color: #171616;
+  padding: 2px;
+  height: 100%;
+}
+
+.hover {
+  padding-top: 5px;
+  padding-left: 4px;
+}
+
+.hover:hover {
+  background-color: hsl(207, 31%, 54%, 0.2);
+  transition: all ease-in 0.3s;
+  border-radius: 5px;
+  color: black;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 2;
+}
+
+.imagesize{
+  width: 80%;
+  height: auto;
+}
+
+.arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.video{
+  min-width: 15rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.video:hover{
+  background-color:  rgb(101, 140, 173, 0.2);
+}
+
+.castround{
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+}
+
+.searchimage{
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.modalbox{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.modalbox2{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+
+.contentbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 4rem;
+}
+
+.arrow2{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  input {
+    width: 500px !important;
+  }
+
+  .searchresults {
+    width: 500px !important;
+  }
+
+  .outlet {
+    width: calc(100% - 22vw);
+  }
+
+  .mediaCard {
+    flex: 0 1 170px;
+  }
+
+  .imagesize{
+    width: 350px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  input {
+    width: 400px;
+  }
+
+  .searchresults {
+    width: 400px;
+  }
+
+  .mediaCard {
+    flex: 0 1 160px;
+  }
+
+  .mediaCard:hover {
+    border: 1px solid rgb(133, 96, 67, 0.5);
+  }
+
+  .imagesize{
+    width: 300px;
+  }
+
+  /* .contentbox{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  } */
 }
